@@ -11,12 +11,12 @@ export class AppService {
   }
 
   async getLink(body: any) { 
-    const res = await this.conn.query(`SELECT * FROM links WHERE link = '${body.link}'`);
+    const res = await this.conn.query(`SELECT * FROM links WHERE id = '${body.id}'`);
     return res.rows;
   }
 
   createLink(body: any){
-    this.conn.query(`INSERT INTO links VALUES (${body.id}, ${body.link}, ${body.message}, ${body.days}, ${body.watching})`)
+    this.conn.query(`INSERT INTO links VALUES ('${body.id}', '${body.message}', ${body.days}, ${body.watching})`)
   }
 
 

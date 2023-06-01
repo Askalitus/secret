@@ -1,7 +1,6 @@
 
 CREATE TABLE IF NOT EXISTS links (
-  id SERIAL NOT NULL PRIMARY KEY,
-  link TEXT NOT NULL,
+  id VARCHAR(32) NOT NULL PRIMARY KEY,
   message TEXT NOT NULL,
   days INT NOT NULL,
   watching INT NOT NULL
@@ -9,5 +8,5 @@ CREATE TABLE IF NOT EXISTS links (
 
 
 INSERT INTO links VALUES
-(1, 'http://localhost/ne21ne1o', 'hello', 3, 3);
+('eaiuwhe782h14g7ea', 'hello', 3, 3);
 
