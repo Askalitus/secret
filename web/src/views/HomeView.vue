@@ -29,6 +29,7 @@ import axios from "../../axios.js"
 import { useRoute } from "vue-router";
 import {v4} from "uuid";
 import {ref} from "vue";
+import moment from "moment";
 
 const route = useRoute()
 const message = ref('')
@@ -41,7 +42,7 @@ const hash = ():void => {
   const hashMessage : string = CryptoJS.AES.encrypt(message.value, 'secret').toString()
 
   axios
-      .post('/', {id: linkId, message: hashMessage, days: days.value, watching: watching.value})
+      .post('/', {id: linkId, message: hashMessage, days: days.value, watching: watching.value, createdIn: moment(Date()).format()})
       .then(link.value = document.location.href + linkId)
 }
 </script>

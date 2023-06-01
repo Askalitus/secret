@@ -16,7 +16,7 @@ export class AppService {
   }
 
   createLink(body: any){
-    this.conn.query(`INSERT INTO links VALUES ('${body.id}', '${body.message}', ${body.days}, ${body.watching})`)
+    this.conn.query(`INSERT INTO links VALUES ('${body.id}', '${body.message}', ${body.days}, ${body.watching}, '${body.createdIn}')`)
   }
 
 
