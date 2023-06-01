@@ -10,8 +10,8 @@ export class AppService {
     return res.rows;
   }
 
-  async getLink(body: any) { 
-    const res = await this.conn.query(`SELECT * FROM links WHERE id = '${body.id}'`);
+  async getLink(id: string) {
+    const res = await this.conn.query(`SELECT * FROM links WHERE id = '${id}'`);
     return res.rows;
   }
 
