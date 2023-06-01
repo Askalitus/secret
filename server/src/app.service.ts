@@ -19,5 +19,9 @@ export class AppService {
     this.conn.query(`INSERT INTO links VALUES ('${body.id}', '${body.message}', ${body.days}, ${body.watching}, '${body.createdIn}')`)
   }
 
+  lowWatching(id: string, body: any): void {
+    this.conn.query(`UPDATE links SET watching = ${body.watching} WHERE id = '${id}'`)
+  }
+
 
 } 

@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import CryptoJS from "crypto-js"
 import {useStore} from "@/stores/store";
 import { useRoute } from "vue-router";
@@ -23,6 +23,7 @@ onMounted(() => {
 
 const showMessage = () => {
   message.value = CryptoJS.AES.decrypt(store.link.message, 'secret').toString(CryptoJS.enc.Utf8)
+  store.lowWatching(route.params.id)
 }
 
 </script>

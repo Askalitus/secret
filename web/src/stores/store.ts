@@ -7,7 +7,8 @@ export const useStore = defineStore('link', () => {
       linkId: '',
       message: '',
       days: 0,
-      watching: 0
+      watching: 0,
+      createdAt: ''
   })
   function getLinkId(id: string): void {
     axios
@@ -17,8 +18,15 @@ export const useStore = defineStore('link', () => {
             link.value.message = res.data[0].message
             link.value.days = res.data[0].days
             link.value.watching = res.data[0].watching
+            link.value.createdAt = res.data[0].createdAt
         })
   }
 
-  return { link, getLinkId }
+  function lowWatching(id: string): void {
+    axios
+        .put('/' + id, { watching: link.value.watching - 1 })
+        .then()
+  }
+
+  return { link, getLinkId, lowWatching }
 })

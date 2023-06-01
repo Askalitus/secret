@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import {Body, Controller, Get, Param, Patch, Post, Put} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -17,6 +17,11 @@ export class AppController {
 
   @Post()
   createLink(@Body() body: any){
-    return this.appService.createLink(body)
+    return this.appService.createLink(body);
+  }
+
+  @Put(':id')
+  lowWatching(@Param('id') id: string, @Body() body: any){
+    return this.appService.lowWatching(id, body);
   }
 }
