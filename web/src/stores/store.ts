@@ -1,19 +1,20 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+// @ts-ignore
 import axios from '../../axios.js';
 
 export const useStore = defineStore('link', () => {
   const link = ref({
-      linkId: '',
-      message: '',
-      days: 0,
-      watching: 0,
-      createdIn: ''
+      linkId: '' as string,
+      message: '' as string,
+      days: 0 as number,
+      watching: 0 as number,
+      createdIn: '' as string
   })
   function getLinkId(id: string): void {
     axios
         .get('/' + id)
-        .then(res => {
+        .then((res: axios.AxiosResponse<any>): void => {
             link.value.linkId = res.data[0].id
             link.value.message = res.data[0].message
             link.value.days = res.data[0].days
@@ -29,7 +30,7 @@ export const useStore = defineStore('link', () => {
         .then()
   }
 
-  const visible = computed(() => {
+  const visible = computed((): boolean => {
       return link.value.watching > 0 && +new Date() - +new Date(link.value.createdIn) < link.value.watching * 24 * 60 * 60 * 1000 ? true : false
   })
 

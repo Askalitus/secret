@@ -26,16 +26,14 @@
 <script setup lang="ts">
 import CryptoJS from "crypto-js"
 import axios from "../../axios.js"
-import { useRoute } from "vue-router";
 import {v4} from "uuid";
 import {ref} from "vue";
 import moment from "moment";
 
-const route = useRoute()
-const message = ref('')
-const days = ref(1)
-const watching = ref(1)
-const link = ref('')
+const message = ref<string>('')
+const days = ref<number>(1)
+const watching = ref<number>(1)
+const link = ref<string>('')
 
 const hash = ():void => {
   if(days.value < 1 || watching.value < 1){
@@ -46,7 +44,9 @@ const hash = ():void => {
 
     axios
         .post('/', {id: linkId, message: hashMessage, days: days.value, watching: watching.value, createdIn: moment(Date()).format()})
-        .then(link.value = document.location.href + linkId)
+        .then(res => {
+          link.value = document.location.href + linkId
+        })
   }
 }
 </script>

@@ -15,15 +15,15 @@ import {onMounted, ref} from "vue";
 
 const store = useStore()
 const route = useRoute()
-const message = ref('Здесь появится ваше сообщение')
+const message = ref<string>('Здесь появится ваше сообщение')
 
 onMounted(() => {
-  store.getLinkId(route.params.id)
+  store.getLinkId(String(route.params.id))
 })
 
-const showMessage = () => {
+const showMessage = (): void => {
   message.value = CryptoJS.AES.decrypt(store.link.message, 'secret').toString(CryptoJS.enc.Utf8)
-  store.lowWatching(route.params.id)
+  store.lowWatching(String(route.params.id))
 }
 
 </script>
