@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <p class="deadLink" v-if="!store.link.days || !store.link.watching">У ссылки закончился срок действия, или ее не существует</p>
-    <p v-if="store.link.days || store.link.watching">У ссылки осталось просмотров: {{ store.link.watching }} и дней: {{ store.link.days }}</p>
-    <textarea readonly cols="30" rows="10" v-model="message" v-if="store.link.days || store.link.watching"></textarea>
-    <button @click="showMessage" v-if="store.link.days || store.link.watching">Показать сообщение</button>
+    <p class="deadLink" v-if="!store.visible">У ссылки закончился срок действия, или ее не существует</p>
+    <p v-if="store.visible">У ссылки осталось просмотров (включая текущий): {{ store.link.watching }} и дней: {{ store.link.days }}</p>
+    <textarea readonly cols="30" rows="10" v-model="message" v-if="store.visible"></textarea>
+    <button @click="showMessage" v-if="store.visible">Показать сообщение</button>
   </div>
 </template>
 
