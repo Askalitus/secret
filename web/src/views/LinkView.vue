@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p class="deadLink" v-if="!store.visible">У ссылки закончился срок действия, или ее не существует</p>
-    <p v-if="store.visible">У ссылки осталось просмотров (включая текущий): {{ store.link.watching }} и дней: {{ store.link.days }}</p>
+    <p v-if="store.visible">У ссылки осталось просмотров (включая текущий): {{ store.link.watching }} и дней: {{ store.remainingDays }}</p>
     <textarea readonly cols="30" rows="10" v-model="message" v-if="store.visible"></textarea>
     <button @click="showMessage" v-if="store.visible">Показать сообщение</button>
   </div>

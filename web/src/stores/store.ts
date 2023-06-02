@@ -2,6 +2,7 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 // @ts-ignore
 import axios from '../../axios.js';
+import moment from 'moment';
 
 export const useStore = defineStore('link', () => {
   const link = ref({
@@ -31,8 +32,12 @@ export const useStore = defineStore('link', () => {
   }
 
   const visible = computed((): boolean => {
-      return link.value.watching > 0 && +new Date() - +new Date(link.value.createdIn) < link.value.watching * 24 * 60 * 60 * 1000 ? true : false
+      return link.value.watching > 0 && +new Date() - (+new Date(link.value.createdIn) - 10800000) < link.value.watching * 24 * 60 * 60 * 1000 ? true : false
   })
 
-  return { link, getLinkId, lowWatching, visible }
+     const remainingDays = computed((): any => {
+         return Math.trunc((link.value.watching * 24 * 60 * 60 * 1000 - (+new Date() - (+new Date(link.value.createdIn) - 10800000))) / 24 / 60 / 60 / 1000) + 1
+     })
+
+  return { link, getLinkId, lowWatching, visible, remainingDays }
 })
