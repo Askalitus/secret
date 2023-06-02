@@ -36,7 +36,7 @@ export const useStore = defineStore('link', () => {
   })
 
      const remainingDays = computed((): any => {
-         return Math.trunc((link.value.watching * 24 * 60 * 60 * 1000 - (+new Date() - (+new Date(link.value.createdIn) - 10800000))) / 24 / 60 / 60 / 1000) + 1
+         return Math.trunc((link.value.days * 24 * 60 * 60 * 1000 - (+new Date() - (+new Date(link.value.createdIn) - 10800000))) / 24 / 60 / 60 / 1000) + 1
      })
 
   return { link, getLinkId, lowWatching, visible, remainingDays }
