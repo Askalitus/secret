@@ -7,7 +7,7 @@ const dbProvider = {
     provide: PG_CONNECTION,
     useValue: new Pool({
     user: 'postgre',
-    host: 'localhost',
+    host: 'postgres',
     database: 'secret',
     password: '1234',
     port: 5432

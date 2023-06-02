@@ -10,3 +10,14 @@ services:
       - .:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: nest-docker
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    volumes:
+      - ./server/src:/server/src
