@@ -2,7 +2,7 @@
   <div class="container">
     <div class="left_side">
       <textarea cols="30" rows="10" v-model="message"></textarea>
-      <button @click="hash">Зашифровать</button>
+      <button @click="hash" :disabled="!message.length">Зашифровать</button>
     </div>
     <div class="line"></div>
     <div class="right_side">
@@ -10,11 +10,11 @@
       <div class="selects">
         <div class="item">
           <p>Дней:</p>
-          <input type="number" v-model="days">
+          <input type="number" min="1" v-model="days">
         </div>
         <div class="item">
           <p>Просмотров:</p>
-          <input type="number" v-model="watching">
+          <input type="number" min="1" v-model="watching">
         </div>
       </div>
       <h1 class="link_title">Готовая ссылка:</h1>
@@ -38,12 +38,16 @@ const watching = ref(1)
 const link = ref('')
 
 const hash = ():void => {
-  const linkId: string = v4().split('-').join('')
-  const hashMessage : string = CryptoJS.AES.encrypt(message.value, 'secret').toString()
+  if(days.value < 1 || watching.value < 1){
+    alert('Введите корректное количество дней и просмотров')
+  }else {
+    const linkId: string = v4().split('-').join('')
+    const hashMessage : string = CryptoJS.AES.encrypt(message.value, 'secret').toString()
 
-  axios
-      .post('/', {id: linkId, message: hashMessage, days: days.value, watching: watching.value, createdIn: moment(Date()).format()})
-      .then(link.value = document.location.href + linkId)
+    axios
+        .post('/', {id: linkId, message: hashMessage, days: days.value, watching: watching.value, createdIn: moment(Date()).format()})
+        .then(link.value = document.location.href + linkId)
+  }
 }
 </script>
 
@@ -73,6 +77,17 @@ const hash = ():void => {
     background: linear-gradient(90deg, rgba(217,128,255,1) 0%, rgba(251,192,242,1) 100%);
     color: white;
     font-weight: 700;
+    transition: 0.2s;
+    box-shadow: 0px 10px 30px rgb(0,0,0,0.5);
+  }
+  button[disabled]{
+    background: rgb(204,204,204);
+    background: linear-gradient(270deg, rgba(204,204,204,1) 0%, rgba(145,145,145,1) 100%);
+    box-shadow: none;
+  }
+  button:hover{
+    box-shadow: none;
+    cursor: pointer;
   }
   .line{
     width: 1px;
