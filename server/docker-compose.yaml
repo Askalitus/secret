@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:latest
+#    todo вынести в файл (env + env.example) доделать файл пример енв
+    environment:
+      POSTGRES_DB: "$DB_NAME"
+      POSTGRES_USER: "$DB_USER"
+      POSTGRES_PASSWORD: '$DB_PASSWORD'
+    volumes:
+      - .:/docker-entrypoint-initdb.d
+    ports:
+      - "${HOST}:$DB_PORT:$DB_PORT"
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nest-docker
+    ports:
+      - '${HOST}:$SERVER_PORT:$SERVER_PORT'
+    depends_on:
+      - postgres
+    volumes:
+      - ./src:/src

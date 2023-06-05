@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /secret
+WORKDIR /server
 
 COPY package*.json ./
 

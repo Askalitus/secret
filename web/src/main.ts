@@ -1,6 +1,9 @@
+import '@/assets/style.sass';
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+// todo убрать не нужные папки в  src
+// @ts-ignore
 import App from './App.vue'
 import router from './router'
 

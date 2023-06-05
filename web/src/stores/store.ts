@@ -4,6 +4,8 @@ import { defineStore } from 'pinia'
 import axios from '../../axios.js';
 import moment from 'moment';
 
+ // todo editorconfig
+// todo eslint , привести в порядок - https://www.npmjs.com/package/eslint-config-airbnb
 export const useStore = defineStore('link', () => {
   const link = ref({
       linkId: '' as string,

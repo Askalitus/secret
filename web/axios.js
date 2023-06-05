@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// todo вынести в env vite
 export default axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: import.meta.env.VITE_BASE_URL
 })

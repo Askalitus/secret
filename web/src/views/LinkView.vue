@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div class="link_container">
     <p class="deadLink" v-if="!store.visible">У ссылки закончился срок действия, или ее не существует</p>
     <p v-if="store.visible">У ссылки осталось просмотров (включая текущий): {{ store.link.watching }} и дней: {{ store.remainingDays }}</p>
     <textarea readonly cols="30" rows="10" v-model="message" v-if="store.visible"></textarea>
-    <button @click="showMessage" v-if="store.visible">Показать сообщение</button>
+    <button class="link_button" @click="showMessage" v-if="store.visible">Показать сообщение</button>
   </div>
 </template>
 
@@ -27,39 +27,3 @@ const showMessage = (): void => {
 }
 
 </script>
-
-<style scoped>
-.container{
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 3px 5px 20px rgba(105, 35, 121, 0.5);
-}
-button{
-  margin-top: 10px;
-  width: 100%;
-  padding: 20px 0;
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
-  background: rgb(217,128,255);
-  background: linear-gradient(90deg, rgba(217,128,255,1) 0%, rgba(251,192,242,1) 100%);
-  color: white;
-  font-weight: 700;
-}
-textarea{
-  border-radius: 10px;
-  resize: none;
-  width: calc(100% - 20px);
-  padding: 10px;
-}
-.deadLink{
-  background: rgba(246, 49, 49, 0.98);
-  padding: 5px;
-  color: white;
-  border-radius: 5px;
-}
-</style>

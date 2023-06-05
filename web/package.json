@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check build-only",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+    "dev": "node_modules/.bin/vite",
+    "build": "node_modules/.bin/run-p type-check build-only",
+    "preview": "node_modules/.bin/vite preview",
+    "build-only": "node_modules/.bin/vite build",
+    "type-check": "node_modules/.bin/vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "eslint": "eslint"
   },
   "dependencies": {
     "@types/crypto-js": "^4.1.1",
@@ -15,8 +16,13 @@
     "axios": "^1.4.0",
     "crypto-js": "^4.1.1",
     "cryptojs": "^2.5.3",
+    "eslint": "^8.42.0",
+    "eslint-config": "^0.3.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-vue": "^9.14.1",
     "moment": "^2.29.4",
     "pinia": "^2.0.36",
+    "sass": "^1.62.1",
     "uuid": "^9.0.0",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0"

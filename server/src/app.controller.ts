@@ -1,6 +1,7 @@
-import { Body, Controller, Get, Param, Patch, Post, Put } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { AppService } from './app.service';
 
+// todo swagger
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
@@ -15,6 +16,7 @@ export class AppController {
     return this.appService.getLink(id);
   }
 
+  // todo типизация
   @Post()
   createLink(@Body() body: any): void {
     this.appService.createLink(body);
