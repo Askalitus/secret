@@ -1,9 +1,0 @@
-
-CREATE TABLE IF NOT EXISTS links (
-    id VARCHAR(32) NOT NULL PRIMARY KEY,
-    message TEXT NOT NULL,
-    days INT NOT NULL,
-    watching INT NOT NULL,
-    createdIn TIMESTAMP NOT NULL
-);
-

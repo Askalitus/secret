@@ -1,40 +1,35 @@
-import { Injectable, Inject } from '@nestjs/common';
-// todo  seq https://sequelize.org/docs/v6/other-topics/migrations/,  описать миграции
-import { PG_CONNECTION } from './constants';
+import { Injectable } from '@nestjs/common';
+import { CreateLinkDto } from './dto/createLink.dto';
+import { Sequelize } from 'sequelize-typescript';
+import { QueryTypes } from 'sequelize';
+import { GetLinkDto } from './dto/getLink.dto';
 
 // todo jsdoc
 @Injectable()
 export class AppService {
-  constructor(@Inject(PG_CONNECTION) private conn: any) {}
-
-  // todo days -> заменить на дату, если дата меньше текущей, нечего не вернуть.
-  // todo добавить поле, сколько раз уже посмотрели. Сравнить с полем при создании
-  // todo метод не нужен
-  async getLinks(): Promise<any> {
-    // todo destruct
-    // todo вернуть только то что надо
-    const res = await this.conn.query('SELECT * FROM links');
-    return res.rows;
-  }
+  constructor(private sequalize: Sequelize) {}
 
   async getLink(id: string): Promise<any> {
-    const res = await this.conn.query(`SELECT * FROM links WHERE id = '${id}'`);
-    return res.rows;
+    return await this.sequalize.query(
+      `SELECT message, willDeleteAt, watchingAll, watchingNow FROM links WHERE id = '${id}' AND watchingAll >= watchingNow AND willDeleteAt > CURRENT_TIMESTAMP`,
+      {
+        type: QueryTypes.SELECT,
+        raw: false,
+      },
+    );
   }
-   //
 
-  // todo типизация
-  createLink(body: any): void {
+  createLink(body: CreateLinkDto): void {
     // todo вставлять через параметры для экранирпования
-    this.conn.query(
-      `INSERT INTO links VALUES ('${body.id}', '${body.message}', ${body.days}, ${body.watching}, '${body.createdIn}')`,
+    this.sequalize.query(
+      `INSERT INTO links VALUES ('${body.id}', '${body.message}', '${body.willDeleteAt}', ${body.watchingAll}, 0)`,
     );
   }
 
   // todo добавить экранирование
-  lowWatching(id: string, body: any): void {
-    this.conn.query(
-      `UPDATE links SET watching = ${body.watching} WHERE id = '${id}'`,
+  lowWatching(id: string): void {
+    this.sequalize.query(
+      `UPDATE links SET watchingNow = watchingNow + 1 WHERE id = '${id}'`,
     );
   }
 }

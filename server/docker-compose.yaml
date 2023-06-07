@@ -2,13 +2,13 @@ version: "3.9"
 services:
   postgres:
     image: postgres:latest
-#    todo вынести в файл (env + env.example) доделать файл пример енв
     environment:
       POSTGRES_DB: "$DB_NAME"
       POSTGRES_USER: "$DB_USER"
       POSTGRES_PASSWORD: '$DB_PASSWORD'
+      PGDATA: "/var/lib/postgresql/data/pgdata"
     volumes:
-      - .:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/postgresql/data/pgdata
     ports:
       - "${HOST}:$DB_PORT:$DB_PORT"
   server:
@@ -20,5 +20,8 @@ services:
       - '${HOST}:$SERVER_PORT:$SERVER_PORT'
     depends_on:
       - postgres
+    command: sh -c "wait && npx sequelize-cli db:migrate && npm run start:dev"
     volumes:
-      - ./src:/src
+      - .:/usr/src/server
+volumes:
+  db_data:
