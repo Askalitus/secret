@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0bfa2e7-13c4-47f2-9a36-44bdf8e61b64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/web/client/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/assets/style.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/router/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/stores/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/views/HomeView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/views/LinkView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/tsconfig.node.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/secret.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.vite/deps_temp_4228d416/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/getLink.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/dto/createLink.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/dto/getLink.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/assets/style.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/router/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/stores/store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/HomeView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/LinkView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vite.config.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="67445b6f-9d4e-441b-967b-87ffec38ffab" />
+        <option name="url" value="https://github.com/Askalitus/secret.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/server/config/config.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/migrations/20230606130508-CreateTable.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2QaqL8otNXRaKE4S31GShazynX7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/askalit/web&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/askalit/secret/server/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/client/src" />
+      <recent name="$PROJECT_DIR$/web/public" />
+      <recent name="$PROJECT_DIR$/web/client" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/client" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0bfa2e7-13c4-47f2-9a36-44bdf8e61b64" name="Changes" comment="" />
+      <created>1685601982060</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685601982060</updated>
+      <workItem from="1685601984303" duration="24716000" />
+      <workItem from="1685686089946" duration="17276000" />
+      <workItem from="1685946867099" duration="2500000" />
+      <workItem from="1685950454752" duration="277000" />
+      <workItem from="1685950797333" duration="19159000" />
+      <workItem from="1685971906633" duration="77000" />
+      <workItem from="1685971991966" duration="2442000" />
+      <workItem from="1686032235292" duration="933000" />
+      <workItem from="1686033176995" duration="3213000" />
+      <workItem from="1686036398381" duration="699000" />
+      <workItem from="1686037105507" duration="449000" />
+      <workItem from="1686037563141" duration="3369000" />
+      <workItem from="1686040941071" duration="17721000" />
+      <workItem from="1686119121925" duration="24714000" />
+      <workItem from="1686204495983" duration="16783000" />
+      <workItem from="1686227005679" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="7eadb5d1-b6c9-4a0a-8c12-ffe24e61d4ca" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="7eadb5d1-b6c9-4a0a-8c12-ffe24e61d4ca">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

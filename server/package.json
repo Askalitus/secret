@@ -25,11 +25,13 @@
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/sequelize": "^9.0.2",
+    "@nestjs/swagger": "^6.3.0",
     "@types/sequelize": "^4.28.15",
     "dotenv": "^16.1.1",
     "pg": "^8.11.0",
     "sequelize": "^6.32.0",
-    "sequelize-typescript": "^2.1.5"
+    "sequelize-typescript": "^2.1.5",
+    "typedoc": "^0.24.8"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",

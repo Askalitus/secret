@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SequelizeModule } from '@nestjs/sequelize';
 import * as process from 'process';
+import { GetLink } from '../models/getLink.entity';
+import { CreateLink } from '../models/createLink.entity';
 
 @Module({
   imports: [
@@ -15,7 +17,7 @@ import * as process from 'process';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      models: [],
+      models: [GetLink, CreateLink],
     }),
   ],
   controllers: [AppController],
