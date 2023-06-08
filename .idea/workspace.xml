@@ -4,57 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0bfa2e7-13c4-47f2-9a36-44bdf8e61b64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/client/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/src/assets/style.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/src/router/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/src/stores/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/src/views/HomeView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/src/views/LinkView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/tsconfig.node.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/secret.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.vite/deps_temp_4228d416/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/getLink.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/dto/createLink.dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/dto/getLink.dto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/assets/style.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/stores/store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/HomeView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/LinkView.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vite.config.ts" beforeDir="false" />
-    </list>
+    <list default="true" id="d0bfa2e7-13c4-47f2-9a36-44bdf8e61b64" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,6 +98,7 @@
       <workItem from="1686119121925" duration="24714000" />
       <workItem from="1686204495983" duration="16783000" />
       <workItem from="1686227005679" duration="8000" />
+      <workItem from="1686227056513" duration="527000" />
     </task>
     <servers />
   </component>
