@@ -6,34 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bfa2e7-13c4-47f2-9a36-44bdf8e61b64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/docs/classes/AppService.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/docs/classes/AppService.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/migrations/20230606130508-CreateTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/migrations/20230606130508-CreateTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/createLink.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/createLink.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/getLink.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/getLink.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/client/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/assets/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/assets/style.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/axios.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/client/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/client/src/modules/home/pages/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/modules/home/pages/HomeView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/client/src/modules/link/pages/LinkView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/modules/link/pages/LinkView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/shims-vue.d.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/client/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,11 +81,11 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/client/src/plugins" />
       <recent name="$PROJECT_DIR$/web/client/src" />
-      <recent name="$PROJECT_DIR$/web/public" />
       <recent name="$PROJECT_DIR$/web/client" />
+      <recent name="$PROJECT_DIR$/web/public" />
       <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/client" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -136,7 +118,7 @@
       <workItem from="1686644051042" duration="2459000" />
       <workItem from="1686646733964" duration="18246000" />
       <workItem from="1686728110593" duration="19812000" />
-      <workItem from="1686810001709" duration="763000" />
+      <workItem from="1686810001709" duration="10453000" />
     </task>
     <servers />
   </component>

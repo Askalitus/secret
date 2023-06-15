@@ -24,6 +24,7 @@
 	"ignorePatterns": ["dist/**/*", "node_modules/**/*"],
 	"rules": {
 		"vuejs-accessibility/form-control-has-label": "off",
+		"import/no-extraneous-dependencies": "off",
 		"import/prefer-default-export": "off",
 		"no-useless-escape": "off",
 		"vue/no-unused-vars": "error",

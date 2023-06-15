@@ -1,9 +1,11 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import { useI18n } from 'vue-i18n';
 
 export const useStore = defineStore('store', () => {
+  const { t } = useI18n();
   const link = ref({
-    message: 'Здесь появится ваше сообщение' as string,
+    message: `${t('placeholder')}` as string,
     remainingDays: 0 as number,
     remainingWatchings: 0 as number,
   });

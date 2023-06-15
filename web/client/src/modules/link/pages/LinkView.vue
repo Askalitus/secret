@@ -4,13 +4,14 @@
       v-if="store.error"
       class="container__deadLink"
     >
-      У ссылки закончился срок действия, или ее не существует
+      {{ $t('deadLink') }}
     </p>
     <p
-      v-if="store.link.message != 'Здесь появится ваше сообщение' && !store.error"
+      v-if="store.link.message != 'Здесь появится ваше сообщение' &&
+        store.link.message != 'Here will appear your message' && !store.error"
     >
-      У ссылки осталось просмотров (включая текущий):
-      {{ store.link.remainingWatchings }} и дней:
+      {{ $t('remainingViews') }}
+      {{ store.link.remainingWatchings }} {{ $t('remainingDays') }}
       {{ store.link.remainingDays }}
     </p>
     <textarea
@@ -21,12 +22,13 @@
       rows="10"
     />
     <button
-      :disabled="store.link.message != 'Здесь появится ваше сообщение'"
+      :disabled="store.link.message != 'Здесь появится ваше сообщение' &&
+        store.link.message != 'Here will appear your message'"
       v-if="!store.error"
       type="button"
       @click="showMessage"
     >
-      Показать сообщение
+      {{ $t('show') }}
     </button>
   </div>
 </template>

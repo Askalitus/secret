@@ -6,21 +6,20 @@
         cols="30"
         rows="10"
       />
-      <!--     todo i18n -->
       <button
         type="button"
         :disabled="!store.userMessage.length"
         @click="create"
       >
-        Зашифровать
+        {{ $t("buttons.hash") }}
       </button>
     </div>
     <div class="container__line" />
     <div class="right">
-      <h1>Удалить сообщение и ссылку после:</h1>
+      <h1>{{ $t('delete') }}</h1>
       <div class="container__right__selects">
         <div class="item">
-          <p>Дней:</p>
+          <p>{{ $t('days') }}</p>
           <input
             v-model="store.userDays"
             type="number"
@@ -28,7 +27,7 @@
           >
         </div>
         <div class="item">
-          <p>Просмотров:</p>
+          <p>{{ $t('watchings') }}</p>
           <input
             v-model="store.userWatchings"
             type="number"
@@ -37,7 +36,7 @@
         </div>
       </div>
       <h1 class="container__right__link-title">
-        Готовая ссылка:
+        {{ $t('link') }}
       </h1>
       <p class="container__right__link">
         {{ store.resultLink }}

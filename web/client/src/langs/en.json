@@ -1,0 +1,14 @@
+{
+  "buttons": {
+    "hash": "Hash"
+  },
+  "delete": "Delete message and link after:",
+  "days": "Days:",
+  "watchings": "Views:",
+  "link": "Link:",
+  "deadLink": "The link ended or does not exist",
+  "remainingViews": "Link have views left (including current):",
+  "remainingDays": " and days:",
+  "show": "Show message",
+  "placeholder": "Here will appear your message"
+}
