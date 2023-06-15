@@ -1,29 +1,29 @@
 <template>
-  <div class="link_container">
+  <div class="container">
     <p
-      v-if="!store.link.message"
-      class="deadLink"
+      v-if="store.error"
+      class="container__deadLink"
     >
       У ссылки закончился срок действия, или ее не существует
     </p>
     <p
-      v-if="store.link.message"
+      v-if="store.link.message != 'Здесь появится ваше сообщение' && !store.error"
     >
       У ссылки осталось просмотров (включая текущий):
-      {{ store.remainingWatching }} и дней:
-      {{ store.remainingDays }}
+      {{ store.link.remainingWatchings }} и дней:
+      {{ store.link.remainingDays }}
     </p>
     <textarea
-      v-if="store.link.message"
-      v-model="message"
+      v-if="!store.error"
+      v-model="store.link.message"
       readonly
       cols="30"
       rows="10"
     />
     <button
-      v-if="store.link.message"
+      :disabled="store.link.message != 'Здесь появится ваше сообщение'"
+      v-if="!store.error"
       type="button"
-      class="link_button"
       @click="showMessage"
     >
       Показать сообщение
@@ -32,22 +32,32 @@
 </template>
 
 <script setup lang="ts">
-import CryptoJS from 'crypto-js';
 import { useRoute } from 'vue-router';
-import { onMounted, ref } from 'vue';
-import { useStore } from '@/store/store';
+import { useStore } from '../../../store/store.ts';
+import { useActions } from '../../../store/actions.ts';
 
 const store = useStore();
+const actions = useActions();
 const route = useRoute();
-const message = ref<string>('Здесь появится ваше сообщение');
-
-onMounted(() => {
-  store.getLinkId(String(route.params.id));
-});
 
 const showMessage = (): void => {
-  message.value = CryptoJS.AES.decrypt(store.link.message, 'secret').toString(CryptoJS.enc.Utf8);
-  store.lowWatching(String(route.params.id));
+  actions.getLinkId(String(route.params.id));
 };
-
 </script>
+
+<style lang="sass" scoped>
+.container
+  padding: 40px
+  display: flex
+  flex-direction: column
+  gap: 40px
+  background: white
+  border-radius: 15px
+  box-shadow: 3px 5px 20px rgba(105, 35, 121, 0.5)
+
+.container__deadLink
+  background: rgba(246, 49, 49, 0.98)
+  padding: 5px
+  color: white
+  border-radius: 5px
+</style>

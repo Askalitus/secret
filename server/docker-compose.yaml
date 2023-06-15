@@ -20,7 +20,7 @@ services:
       - '${HOST}:$SERVER_PORT:$SERVER_PORT'
     depends_on:
       - postgres
-    command: sh -c "wait && npx sequelize-cli db:migrate && npm run start:dev"
+    command: sh -c "wait && npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npm run start:dev"
     volumes:
       - .:/usr/src/server
 volumes:

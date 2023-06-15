@@ -1,27 +1,28 @@
 <template>
-  <div class="home_container">
+  <div class="container">
     <div class="left_side">
       <textarea
-        v-model="message"
+        v-model="store.userMessage"
         cols="30"
         rows="10"
       />
+      <!--     todo i18n -->
       <button
         type="button"
-        :disabled="!message.length"
-        @click="hash"
+        :disabled="!store.userMessage.length"
+        @click="create"
       >
         Зашифровать
       </button>
     </div>
-    <div class="line" />
-    <div class="right_side">
+    <div class="container__line" />
+    <div class="right">
       <h1>Удалить сообщение и ссылку после:</h1>
-      <div class="selects">
+      <div class="container__right__selects">
         <div class="item">
           <p>Дней:</p>
           <input
-            v-model="days"
+            v-model="store.userDays"
             type="number"
             min="1"
           >
@@ -29,51 +30,61 @@
         <div class="item">
           <p>Просмотров:</p>
           <input
-            v-model="watching"
+            v-model="store.userWatchings"
             type="number"
             min="1"
           >
         </div>
       </div>
-      <h1 class="link_title">
+      <h1 class="container__right__link-title">
         Готовая ссылка:
       </h1>
-      <p class="link">
-        {{ link }}
+      <p class="container__right__link">
+        {{ store.resultLink }}
       </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import CryptoJS from 'crypto-js';
-import { v4 } from 'uuid';
-import { ref } from 'vue';
-import moment from 'moment';
-import axios from '../../../axios';
+import { useStore } from '../../../store/store.ts';
+import { useActions } from '../../../store/actions.ts';
 
-const message = ref<string>('');
-const days = ref<number>(1);
-const watching = ref<number>(1);
-const link = ref<string>('');
+const store = useStore();
+const actions = useActions();
 
-const hash = ():void => {
-  if (days.value < 1 || watching.value < 1) {
-    alert('Введите корректное количество дней и просмотров');
-  } else {
-    const linkId: string = v4().split('-').join('');
-    const hashMessage : string = CryptoJS.AES.encrypt(message.value, 'secret').toString();
-
-    axios
-      .post('/', {
-        id: linkId,
-        message: hashMessage,
-        willDeleteAt: moment(new Date(new Date().getTime() + days.value * 86400000)).format(),
-        watchingAll: watching.value,
-      })
-      .then(() => {
-        link.value = document.location.href + linkId;
-      });
-  }
+const create = ():void => {
+  actions.createLink();
 };
 </script>
+
+<style lang="sass" scoped>
+.container
+  padding: 40px
+  display: flex
+  gap: 40px
+  background: white
+  border-radius: 15px
+  box-shadow: 3px 5px 20px rgba(105, 35, 121, 0.5)
+
+.container__line
+  width: 1px
+  height: 200px
+  background: rgb(0,0,0,0.3)
+
+.container__right__selects
+  display: flex
+  justify-content: space-between
+  margin-top: 20px
+
+.container__right__link-title
+  margin-top: 10px
+.container__right__link
+  width: 100%
+  padding: 10px
+  background: rgba(251,192,242,1)
+  height: 20px
+  border-radius: 10px
+  margin-top: 10px
+  color: white
+</style>

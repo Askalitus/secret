@@ -1,16 +1,23 @@
 import { Table, Column, Model } from 'sequelize-typescript';
+import { ApiProperty } from '@nestjs/swagger';
 
 @Table
 export class GetLink extends Model {
   @Column
+  @ApiProperty({ description: 'Сообщение пользователя', nullable: false })
   message: string;
 
   @Column
-  willDeleteAt: string;
+  @ApiProperty({
+    description: 'Количество оставшихся дней действия ссылки',
+    nullable: false,
+  })
+  remainingDays: number;
 
   @Column
-  watchingAll: number;
-
-  @Column
-  watchingNow: number;
+  @ApiProperty({
+    description: 'Количество оставшихся просмотров ссылки',
+    nullable: false,
+  })
+  remainingWatchings: number;
 }

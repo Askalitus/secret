@@ -6,6 +6,7 @@
 		"node": true
 	},
 	"extends": [
+		"@vue/airbnb",
 		"plugin:vue/vue3-recommended",
 		"eslint:recommended",
 		"@vue/typescript/recommended"
@@ -22,6 +23,8 @@
 	"plugins": [],
 	"ignorePatterns": ["dist/**/*", "node_modules/**/*"],
 	"rules": {
+		"vuejs-accessibility/form-control-has-label": "off",
+		"import/prefer-default-export": "off",
 		"no-useless-escape": "off",
 		"vue/no-unused-vars": "error",
 		"vue/no-v-html": "off",

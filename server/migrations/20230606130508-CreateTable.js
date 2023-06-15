@@ -26,6 +26,13 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
+      secret: {
+        allowNull: false,
+        type: Sequelize.DataTypes.STRING,
+      },
     });
+  },
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.dropTable('links');
   },
 };

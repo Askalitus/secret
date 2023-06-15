@@ -1,5 +1,5 @@
-import axios from 'axios';
+import axios from 'src/axios.ts';
 
 export default axios.create({
-  baseURL: process.env.VUE_APP_BASE_URL,
+  baseURL: import.meta.env.VITE_BASE_URL,
 });
