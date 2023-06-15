@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bfa2e7-13c4-47f2-9a36-44bdf8e61b64" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/modules/home/pages/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/modules/home/pages/HomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/modules/link/pages/LinkView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/modules/link/pages/LinkView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/client/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.idea/web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vite/deps/_metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vite/deps/chunk-DVJZKEUM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vite/deps/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vite/deps/pinia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vite/deps/pinia.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vite/deps/vue-router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vite/deps/vue-router.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.vscode/extensions.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +123,7 @@
       <workItem from="1686644051042" duration="2459000" />
       <workItem from="1686646733964" duration="18246000" />
       <workItem from="1686728110593" duration="19812000" />
-      <workItem from="1686810001709" duration="10453000" />
+      <workItem from="1686810001709" duration="10766000" />
     </task>
     <servers />
   </component>
