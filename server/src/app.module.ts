@@ -8,7 +8,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GetLink } from '../models/getLink.entity';
 import { CreateLink } from '../models/createLink.entity';
-import { GetSecret } from '../models/getSecret.entity';
+import { LinkId } from '../models/linkId.entity';
 
 @Module({
   imports: [
@@ -20,7 +20,7 @@ import { GetSecret } from '../models/getSecret.entity';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      models: [GetLink, CreateLink, GetSecret],
+      models: [GetLink, CreateLink, LinkId],
     }),
   ],
   controllers: [AppController],

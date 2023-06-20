@@ -5,22 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bfa2e7-13c4-47f2-9a36-44bdf8e61b64" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/client/src/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vite/deps/_metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vite/deps/chunk-DVJZKEUM.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vite/deps/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vite/deps/pinia.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vite/deps/pinia.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vite/deps/vue-router.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vite/deps/vue-router.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/createLink.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/createLink.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/getLink.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/getLink.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/getSecret.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/.env" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/assets/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/assets/style.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/langs/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/langs/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/langs/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/langs/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/modules/home/pages/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/modules/home/pages/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/modules/link/pages/LinkView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/modules/link/pages/LinkView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/plugins/i18n.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/store/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/store/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/client/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/client/src/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +84,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.16.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.16.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/askalit/web&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/askalit/test&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -76,21 +92,22 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/askalit/secret/server/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/client/src/plugins" />
-      <recent name="$PROJECT_DIR$/web/client/src" />
+      <recent name="$PROJECT_DIR$/web/client/src/plugins/i18n" />
       <recent name="$PROJECT_DIR$/web/client" />
-      <recent name="$PROJECT_DIR$/web/public" />
       <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/public" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -123,7 +140,12 @@
       <workItem from="1686644051042" duration="2459000" />
       <workItem from="1686646733964" duration="18246000" />
       <workItem from="1686728110593" duration="19812000" />
-      <workItem from="1686810001709" duration="10766000" />
+      <workItem from="1686810001709" duration="13022000" />
+      <workItem from="1686830728535" duration="4560000" />
+      <workItem from="1686895612076" duration="642000" />
+      <workItem from="1686897796685" duration="16766000" />
+      <workItem from="1687154634892" duration="13583000" />
+      <workItem from="1687241341496" duration="4905000" />
     </task>
     <servers />
   </component>

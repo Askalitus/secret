@@ -10,5 +10,6 @@
   "remainingViews": "Link have views left (including current):",
   "remainingDays": " and days:",
   "show": "Show message",
-  "placeholder": "Here will appear your message"
+  "placeholder": "Here will appear your message",
+  "changeLang": "Change language"
 }

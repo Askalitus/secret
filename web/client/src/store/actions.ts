@@ -9,12 +9,13 @@ export const useActions = defineStore('actions', () => {
     axios
       .get(`/${id}`)
       .then((res: AxiosResponse<any>): void => {
+        console.log(res);
         store.link.message = res.data.message;
         store.link.remainingDays = res.data.remainingdays;
         store.link.remainingWatchings = res.data.remainingwatchings;
-        if (res.data === 'Ссылка была удалена или её не существует!') {
-          store.error = 'Ссылка была удалена или её не существует!';
-        }
+      })
+      .catch((err) => {
+        store.error = true;
       });
 
     axios
@@ -27,7 +28,7 @@ export const useActions = defineStore('actions', () => {
     axios
       .post('/', { message: store.userMessage, days: store.userDays, watchingAll: store.userWatchings })
       .then((res) => {
-        store.resultLink = document.location.href + res.data;
+        store.resultLink = document.location.href + res.data.id;
       })
       .catch((err) => {
         alert(err.response.data.message[0]);

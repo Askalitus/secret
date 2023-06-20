@@ -7,26 +7,23 @@
       {{ $t('deadLink') }}
     </p>
     <p
-      v-if="store.link.message != 'Здесь появится ваше сообщение' &&
-        store.link.message != 'Here will appear your message' && !store.error"
+      v-if="store.link.message"
     >
-      {{ $t('remainingViews') }}
-      {{ store.link.remainingWatchings }} {{ $t('remainingDays') }}
-      {{ store.link.remainingDays }}
+      {{ getters.remainings }}
     </p>
     <textarea
       v-if="!store.error"
       v-model="store.link.message"
+      :placeholder="`${$t('placeholder')}`"
       readonly
       cols="30"
       rows="10"
     />
     <button
-      :disabled="store.link.message != 'Здесь появится ваше сообщение' &&
-        store.link.message != 'Here will appear your message'"
       v-if="!store.error"
+      :disabled="store.link.remainingDays"
       type="button"
-      @click="showMessage"
+      @click="actions.getLinkId(String(route.params.id))"
     >
       {{ $t('show') }}
     </button>
@@ -37,18 +34,17 @@
 import { useRoute } from 'vue-router';
 import { useStore } from '../../../store/store.ts';
 import { useActions } from '../../../store/actions.ts';
+import { useGetters } from '../../../store/getters.ts';
 
 const store = useStore();
 const actions = useActions();
+const getters = useGetters();
 const route = useRoute();
-
-const showMessage = (): void => {
-  actions.getLinkId(String(route.params.id));
-};
 </script>
 
 <style lang="sass" scoped>
 .container
+  width: 650px
   padding: 40px
   display: flex
   flex-direction: column
@@ -57,9 +53,10 @@ const showMessage = (): void => {
   border-radius: 15px
   box-shadow: 3px 5px 20px rgba(105, 35, 121, 0.5)
 
-.container__deadLink
-  background: rgba(246, 49, 49, 0.98)
-  padding: 5px
-  color: white
-  border-radius: 5px
+  &__deadLink
+    background: rgba(246, 49, 49, 0.98)
+    padding: 5px
+    color: white
+    border-radius: 5px
+    text-align: center
 </style>

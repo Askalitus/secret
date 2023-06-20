@@ -12,6 +12,7 @@ export class CreateLink extends Model {
   @ApiProperty({
     description: 'Количество дней действия ссылки',
     nullable: false,
+    default: 1,
   })
   @Min(1, { message: 'Количество дней должно быть больше одного!' })
   days: number;
@@ -20,6 +21,7 @@ export class CreateLink extends Model {
   @ApiProperty({
     description: 'Количество просмотров ссылки',
     nullable: false,
+    default: 1,
   })
   @Min(1, { message: 'Количество просмтров должно быть больше одного!' })
   watchingAll: number;

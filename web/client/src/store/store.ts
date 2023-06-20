@@ -1,22 +1,27 @@
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 import { defineStore } from 'pinia';
-import { useI18n } from 'vue-i18n';
+import { Link } from '../interfaces.ts';
 
 export const useStore = defineStore('store', () => {
-  const { t } = useI18n();
-  const link = ref({
-    message: `${t('placeholder')}` as string,
-    remainingDays: 0 as number,
-    remainingWatchings: 0 as number,
+
+  const link: Link = reactive({
+    message: '',
+    remainingDays: 0,
+    remainingWatchings: 0,
   });
 
   const userMessage = ref('');
   const userDays = ref(0);
   const userWatchings = ref(0);
   const resultLink = ref('');
-  const error = ref('');
+  const error = ref(false);
+
+  const inputs: { title: string, model: number }[] = reactive([
+    { title: 'days', model: userDays },
+    { title: 'watchings', model: userWatchings },
+  ]);
 
   return {
-    link, userMessage, userDays, userWatchings, resultLink, error,
+    link, userMessage, userDays, userWatchings, resultLink, error, inputs,
   };
 });

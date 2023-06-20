@@ -20,4 +20,7 @@ export class GetLink extends Model {
     nullable: false,
   })
   remainingWatchings: number;
+
+  @Column
+  secret: string;
 }

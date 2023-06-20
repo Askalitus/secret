@@ -1,11 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import {HttpException, HttpStatus, Injectable} from '@nestjs/common';
 import { Sequelize } from 'sequelize-typescript';
 import { QueryTypes } from 'sequelize';
 import * as CryptoJS from 'crypto-js';
 import * as moment from 'moment';
 import { GetLink } from '../models/getLink.entity';
 import { CreateLink } from '../models/createLink.entity';
-import { GetSecret } from '../models/getSecret.entity';
+import { LinkId } from '../models/linkId.entity';
 
 @Injectable()
 export class AppService {
@@ -15,25 +15,11 @@ export class AppService {
    *Получение ссылки
    * @param {string} id - идентификатор ссылки
    */
-  async getLink(id: string): Promise<GetLink | string> {
-    const secret = await this.sequalize.query(
-      `
-          SELECT secret
-          FROM links
-          WHERE id = $1 AND watchingAll > watchingNow AND willDeleteAt > CURRENT_TIMESTAMP
-        `,
-      {
-        type: QueryTypes.SELECT,
-        model: GetSecret,
-        mapToModel: true,
-        bind: [id],
-      },
-    );
-
+  async getLink(id: string): Promise<GetLink> {
     return this.sequalize
       .query(
         `
-            SELECT message,
+            SELECT message, secret,
                    CAST(EXTRACT(DAY FROM willDeleteAt - CURRENT_TIMESTAMP) AS int) + 1 AS remainingDays,
                    (watchingAll - watchingNow) AS remainingWatchings
             FROM links
@@ -44,19 +30,22 @@ export class AppService {
         {
           type: QueryTypes.SELECT,
           model: GetLink,
-          mapToModel: true,
           bind: [id],
         },
       )
-      .then((link): GetLink | string => {
-        if (!link[0]) {
-          return 'Ссылка была удалена или её не существует!';
+      .then((links): GetLink => {
+        const [link] = links;
+        if (!link) {
+          throw new HttpException(
+            'Ссылка была удалена или её не существует!',
+            HttpStatus.NOT_FOUND,
+          );
         }
-        link[0].message = CryptoJS.AES.decrypt(
-          link[0].message,
-          secret[0].secret,
-        ).toString(CryptoJS.enc.Utf8);
-        return link[0];
+        link.message = CryptoJS.AES.decrypt(link.message, link.secret).toString(
+          CryptoJS.enc.Utf8,
+        );
+        delete link.dataValues.secret;
+        return link;
       });
   }
 
@@ -64,8 +53,10 @@ export class AppService {
    * Создание ссылки
    * @param {object} body - объект с данными ссылки
    */
-  createLink(body: CreateLink): string {
-    const id: string = crypto.randomUUID().split('-').join('');
+  createLink(body: CreateLink): LinkId {
+    const id = new LinkId();
+
+    id.id = crypto.randomUUID().split('-').join('');
 
     const secretKey: string = crypto.randomUUID().split('-').join('');
 
@@ -82,7 +73,7 @@ export class AppService {
       `INSERT INTO links
         VALUES ($1, $2, $3, $4, 0, $5)`,
       {
-        bind: [id, message, willDeleteAt, body.watchingAll, secretKey],
+        bind: [id.id, message, willDeleteAt, body.watchingAll, secretKey],
       },
     );
 

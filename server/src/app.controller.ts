@@ -11,18 +11,18 @@ import { ApiOperation, ApiParam, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
 import { GetLink } from '../models/getLink.entity';
 import { CreateLink } from '../models/createLink.entity';
+import { LinkId } from '../models/linkId.entity';
 
 @ApiTags('links')
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
-
   @Get(':id')
   @ApiOperation({ summary: 'Получение данных ссылки по идентификатору' })
   @ApiParam({ name: 'id', required: true, description: 'Идентификатор ссылки' })
   @ApiResponse({ status: HttpStatus.OK, description: 'Success', type: GetLink })
   @ApiResponse({ status: HttpStatus.BAD_REQUEST, description: 'Bad Request' })
-  getLink(@Param('id') id: string): Promise<GetLink | string> {
+  getLink(@Param('id') id: string): Promise<GetLink> {
     return this.appService.getLink(id);
   }
 
@@ -31,10 +31,10 @@ export class AppController {
   @ApiResponse({
     status: HttpStatus.CREATED,
     description: 'Success',
-    type: 'Идентификатор ссылки',
+    type: LinkId,
   })
   @ApiResponse({ status: HttpStatus.BAD_REQUEST, description: 'Bad Request' })
-  createLink(@Body() body: CreateLink): string {
+  createLink(@Body() body: CreateLink): LinkId {
     return this.appService.createLink(body);
   }
 
